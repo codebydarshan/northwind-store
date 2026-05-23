@@ -6,7 +6,7 @@ import https from "node:https";
 const job = new CronJob("* * * * *", function () {
   const base = process.env.FRONTEND_URL;
   if (!base) return;
-  const url = new URL("/health", base).href;
+  const url = "https://northwind-store-sxdl.onrender.com/health";
   const client = url.startsWith("https:") ? https : http;
 
   client
